@@ -1,3 +1,6 @@
+# Buka VScode lalu jalankan setelah kode untuk mikrokontroller mu sudah terupload, dan
+# pastikan sambungan kabel usb tetap terkoneksi ya!
+
 import cv2
 import mediapipe as mp
 import serial
@@ -272,4 +275,5 @@ def main():
         print(f"Error: {e}")
 
 if __name__ == "__main__":
+
     main()
