@@ -1,3 +1,4 @@
+// Upload Kode ini ke Esp32 atau Mikrokontroller kamu
 // ESP32 Hand Detection Control
 // Pin definitions untuk LED
 const int ledPins[] = {18, 19, 21, 22, 23};
