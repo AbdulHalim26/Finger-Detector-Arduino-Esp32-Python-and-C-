@@ -1,4 +1,4 @@
-# Buka VScode lalu jalankan setelah kode untuk mikrokontroller mu sudah terupload, dan
+# Buka VScode lalu jalankan setelah kode untuk mikrokontroller-mu sudah terupload, dan
 # pastikan sambungan kabel usb tetap terkoneksi ya!
 
 import cv2
@@ -277,3 +277,4 @@ def main():
 if __name__ == "__main__":
 
     main()
+
