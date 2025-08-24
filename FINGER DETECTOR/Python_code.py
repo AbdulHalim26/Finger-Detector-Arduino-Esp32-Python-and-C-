@@ -60,6 +60,7 @@ class HandDetectionController:
         fingers_up = []
         
         # Deteksi untuk ibu jari (Thumb) - khusus karena orientasinya berbeda
+        #Code by @mc.zminecrafter_18
         # Untuk tangan kanan: tip.x > mcp.x menunjukkan jari terbuka
         # Untuk tangan kiri: tip.x < mcp.x menunjukkan jari terbuka
         thumb_tip = landmarks[finger_landmarks[0][0]]
@@ -95,7 +96,7 @@ class HandDetectionController:
             # 3. Jarak tip-mcp cukup jauh (untuk menghindari false positive)
             finger_straight = (tip.y < pip.y) and (pip.y < mcp.y)
             finger_extended = abs(tip.y - mcp.y) > 0.04  # threshold jarak minimum
-            
+            #Code by @mc.zminecrafter_18
             fingers_up.append(1 if finger_straight and finger_extended else 0)
         
         return sum(fingers_up)
@@ -158,7 +159,7 @@ class HandDetectionController:
         wrist = landmarks[0]
         middle_mcp = landmarks[finger_landmarks[2][2]]
         is_right_hand = middle_mcp.x > wrist.x
-        
+        #Code by @mc.zminecrafter_18
         if is_right_hand:
             thumb_open = thumb_tip.x > thumb_mcp.x
         else:
@@ -265,7 +266,7 @@ def main():
     """
     print("=== ESP32 Hand Detection LED Controller ===")
     print("Initializing...")
-    
+    #Code by @mc.zminecrafter_18
     try:
         controller = HandDetectionController(com_port='COM4')
         controller.run()
@@ -277,4 +278,5 @@ def main():
 if __name__ == "__main__":
 
     main()
+
 
