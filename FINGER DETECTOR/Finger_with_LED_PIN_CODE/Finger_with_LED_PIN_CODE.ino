@@ -7,7 +7,7 @@ const int numLeds = 5;
 void setup() {
   // Inisialisasi serial communication
   Serial.begin(115200);
-  
+  //Code by @mc.zminecrafter_18
   // Setup LED pins sebagai output
   for (int i = 0; i < numLeds; i++) {
     pinMode(ledPins[i], OUTPUT);
@@ -29,7 +29,7 @@ void loop() {
     
     // Convert string ke integer
     int fingerCount = receivedData.toInt();
-    
+    //Code by @mc.zminecrafter_18
     // Validasi input (0-5)
     if (fingerCount >= 0 && fingerCount <= 5) {
       controlLeds(fingerCount);
